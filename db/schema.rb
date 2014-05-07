@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416205714) do
+ActiveRecord::Schema.define(version: 20140423220547) do
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.string   "property_1"
+    t.string   "property_2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parameters", force: true do |t|
+    t.string  "name"
+    t.integer "event_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

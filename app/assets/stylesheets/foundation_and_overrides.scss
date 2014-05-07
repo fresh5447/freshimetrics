@@ -7,7 +7,7 @@
 //
 
 // This is the default html and body font-size for the base rem value.
-// $rem-base: 16px;
+ $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
@@ -41,7 +41,7 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -54,7 +54,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+ $primary-color: #398EAC;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -195,8 +195,8 @@
 // $acronym-underline: 1px dotted #ddd;
 
 // We use these to control padding and margin
-// $microformat-padding: rem-calc(10 12);
-// $microformat-margin: rem-calc(0 0 20 0);
+ $microformat-padding: rem-calc(10 12);
+ $microformat-margin: rem-calc(0 0 20 0);
 
 // We use these to control the border styles
 // $microformat-border-width: 1px;
@@ -717,7 +717,7 @@
 // $off-canvas-overlay-background-hover: rgba(#fff, 0.05);
 
 // Transition Variables
-// $menu-slide: "transform 500ms ease";
+ $menu-slide: "transform 500ms ease";
 
 // Orbit
 
@@ -726,26 +726,26 @@
 // We use these to control the caption styles
 // $orbit-container-bg: none;
 // $orbit-caption-bg: rgba(51,51,51, 0.8);
-// $orbit-caption-font-color: #fff;
+ $orbit-caption-font-color: #f04124;
 // $orbit-caption-font-size: rem-calc(14);
 // $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
-// $orbit-caption-padding: rem-calc(10 14);
-// $orbit-caption-height: auto;
+ $orbit-caption-padding: rem-calc(10 14);
+ $orbit-caption-height: auto;
 
 // We use these to control the left/right nav styles
 // $orbit-nav-bg: transparent;
 // $orbit-nav-bg-hover: rgba(0,0,0,0.3);
-// $orbit-nav-arrow-color: #fff;
-// $orbit-nav-arrow-color-hover: #fff;
+ $orbit-nav-arrow-color: #fff;
+ $orbit-nav-arrow-color-hover: #fff;
 
 // We use these to control the timer styles
 // $orbit-timer-bg: rgba(255,255,255,0.3);
-// $orbit-timer-show-progress-bar: true;
+ $orbit-timer-show-progress-bar: true;
 
 // We use these to control the bullet nav styles
-// $orbit-bullet-nav-color: #ccc;
-// $orbit-bullet-nav-color-active: #999;
-// $orbit-bullet-radius: rem-calc(9);
+ $orbit-bullet-nav-color: #ccc;
+ $orbit-bullet-nav-color-active: #999;
+ $orbit-bullet-radius: rem-calc(9);
 
 // We use these to controls the style of slide numbers
 // $orbit-slide-number-bg: rgba(0,0,0,0);
@@ -753,7 +753,7 @@
 // $orbit-slide-number-padding: rem-calc(5);
 
 // We use these to controls the css animation
-// $orbit-animation-speed: 500ms;
+ $orbit-animation-speed: 500ms;
 // $orbit-animation-ease: ease-in-out;
 
 // Hide controls on small
@@ -1279,3 +1279,5 @@
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+// $include-html-grid-classes: $include-html-classes;
+// $include-xl-html-grid-classes: false;

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Freshimetrics" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,7 +13,47 @@
 
   <body>
 
-    <%= yield %>
+  <nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><%= link_to "Freshimetrics", root_path %></a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    
+    <ul class="right">
+     <li class="has-dropdown">
+      <a href="#">Start Here!</a>
+        <ul class="dropdown">
+          <% if current_user %>
+           <li><%= link_to('My Events', events_path) %></li>
+           <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %></li>
+          <% else %>
+            <li><%= link_to("Sign In",new_user_session_path) %></li>
+            <li><%= link_to("Sign Up",new_user_registration_path) %></li>
+          <% end %>            
+        </ul>
+      </li>
+    </ul>
+  
+  </section>
+  </nav>
+
+ 
+
+ <%= yield %>
+
+
+
+
     <%= javascript_include_tag "application" %>
+    <%= yield :page_scripts %>
   </body>
+  
 </html>
+
+
+
