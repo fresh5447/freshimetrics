@@ -3,7 +3,7 @@ class ApiController < ActionController::Base
   layout 'application'
   skip_before_action :verify_authenticity_token
   before_filter :cors_preflight_check 
-  after_filer :cors_set_access_control_headers 
+  after_filter :cors_set_access_control_headers 
  
   #neccessary in all controllers that will respond with JSON
   respond_to :json
