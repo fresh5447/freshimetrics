@@ -1,3 +1,3 @@
 #Freshimetrics
 
-An analytical tool built by Doug Walter.
+An analytical tool built by the Doug Walter.
