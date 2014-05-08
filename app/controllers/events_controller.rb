@@ -40,8 +40,11 @@ class EventsController < ApplicationController
 
     # blocmetrics.track("some event name", {property_1: "some value", property_2: "some other value"})
     # {"name"=>"Page Views", "application"=>"Bloccit", "topic_name"=>"officiis enim laboriosam quibusdam aperiam qui voluptatum et iusto", "app_user"=>"4", "app_owner"=>"douglaswalter2@gmail.com", "event"=>{"name"=>"Page Views"}}
-    @event = Event.create(name: params[:name], property_1: params[:topic_name], property_2: params[:app_owner])
+    Rails.logger.info(">>>>>>>>>This is in heroku")
 
+    @event = Event.create(name: params[:name], property_1: params[:topic_name], property_2: params[:app_owner])
+    Rails.logger.info ">>>>>> #{@event}"
+    Rails.logger.info ">>>>> #{params.inspect}"
     respond_to do |format|
       format.json { head :ok }
       format.js
