@@ -43,7 +43,7 @@ class EventsController < ApplicationController
     Rails.logger.info(">>>>>>>>>This is in heroku")
 
     @event = Event.create(name: params[:name], property_1: params[:topic_name], property_2: params[:app_owner])
-    Rails.logger.info ">>>>>> #{@event}"
+    Rails.logger.info ">>>>>> #{@event.inspect}"
     Rails.logger.info ">>>>> #{params.inspect}"
     respond_to do |format|
       format.json { head :ok }
