@@ -14,8 +14,7 @@ $(document).ready(function (){
   }
 
   var _bm_request = new XMLHttpRequest();
-  _bm_request.open("POST", "http://freshimetrics.herokuapp.com/events
-", true);
+  _bm_request.open("POST", "http://freshimetrics.herokuapp.com/events.json", true);
   _bm_request.setRequestHeader('Content-Type', 'application/json');
   _bm_request.onreadystatechange = function() {
     // this function runs when the Ajax request changes state.

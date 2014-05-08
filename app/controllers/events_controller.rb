@@ -39,7 +39,8 @@ class EventsController < ApplicationController
     # user.events.create!(event_params)
 
     # blocmetrics.track("some event name", {property_1: "some value", property_2: "some other value"})
-    @event = Event.create(event_params)
+    # {"name"=>"Page Views", "application"=>"Bloccit", "topic_name"=>"officiis enim laboriosam quibusdam aperiam qui voluptatum et iusto", "app_user"=>"4", "app_owner"=>"douglaswalter2@gmail.com", "event"=>{"name"=>"Page Views"}}
+    @event = Event.create(name: params[:name], property_1: params[:topic_name], property_2: params[:app_owner])
 
     respond_to do |format|
       format.json { head :ok }
@@ -47,41 +48,8 @@ class EventsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /events/1
-  # PATCH/PUT /events/1.json
-  def update
-    respond_to do |format|
-      if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /events/1
-  # DELETE /events/1.json
-  #def destroy
-   # @event.destroy
-    #respond_to do |format|
-     # format.html { redirect_to events_url }
-      #format.json { head :no_content }
-    #end
-  #end
 
   private
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def event_params
-      params.require(:event).permit(:name, :topic_name, :app_user, :app_owner, :application)
-      #params.require(:event).permit(:name, :body)
-    end
-
-     #disabling the CSRF protection 
-
-
   def permission_denied_error
    error(403, 'Permission Denied!')
   end
